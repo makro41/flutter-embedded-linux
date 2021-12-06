@@ -35,6 +35,7 @@ class FlutterEmbedderOptions {
                              false);
     options_.AddInt("width", "w", "Flutter app window width", 1280, false);
     options_.AddInt("height", "h", "Flutter app window height", 720, false);
+    options_.AddInt("dpi", "s", "Flutter app window DPI", 400, false);
 #endif
   }
   ~FlutterEmbedderOptions() = default;
@@ -72,6 +73,7 @@ class FlutterEmbedderOptions {
             : flutter::FlutterViewController::ViewMode::kNormal;
     window_width_ = options_.GetValue<int>("width");
     window_height_ = options_.GetValue<int>("height");
+    window_dpi_ = options_.GetValue<int>("dpi");
 #endif
 
     return true;
@@ -86,6 +88,7 @@ class FlutterEmbedderOptions {
   }
   int WindowWidth() const { return window_width_; }
   int WindowHeight() const { return window_height_; }
+  int WindowDpi() const { return window_dpi_; }
 
  private:
   commandline::CommandOptions options_;
@@ -98,6 +101,7 @@ class FlutterEmbedderOptions {
       flutter::FlutterViewController::ViewMode::kNormal;
   int window_width_ = 1280;
   int window_height_ = 720;
+  int window_dpi_ = 400;
 };
 
 #endif  // FLUTTER_EMBEDDER_OPTIONS_
