@@ -17,7 +17,7 @@ FlutterViewController::FlutterViewController(
   FlutterDesktopViewProperties c_view_properties = {};
   c_view_properties.width = view_properties.width;
   c_view_properties.height = view_properties.height;
-  c_view_properties.pixel_ratio = view_properties.pixel_ratio;
+  c_view_properties.pixel_ratio = static_cast<double>view_properties.pixel_ratio;
   c_view_properties.view_mode =
       (view_properties.view_mode == ViewMode::kFullscreen)
           ? FlutterDesktopViewMode::kFullscreen
