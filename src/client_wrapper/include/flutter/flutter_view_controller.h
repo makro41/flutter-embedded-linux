@@ -40,6 +40,9 @@ class FlutterViewController {
     // View height.
     int height;
 
+    // View Pixel Ratio
+    double pixel_ratio;
+
     // View display mode. If you set kFullscreen, the parameters of both `width`
     // and `height` will be ignored.
     ViewMode view_mode;

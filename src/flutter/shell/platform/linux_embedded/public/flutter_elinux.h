@@ -70,6 +70,9 @@ typedef struct {
   // View height.
   int height;
 
+  // View pixel-ratio.
+  int pixel_ratio;
+
   // View display mode. If you set kFullscreen, the parameters of both `width`
   // and `height` will be ignored.
   FlutterDesktopViewMode view_mode;

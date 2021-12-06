@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
   flutter::FlutterViewController::ViewProperties view_properties = {};
   view_properties.width = options.WindowWidth();
   view_properties.height = options.WindowHeight();
+  view_properties.pixel_ratio = options.WindowPixelRatio();
   view_properties.view_mode = options.WindowViewMode();
   view_properties.use_mouse_cursor = options.IsUseMouseCursor();
   view_properties.use_onscreen_keyboard = options.IsUseOnscreenKeyboard();
