@@ -72,7 +72,7 @@ bool NativeWindowWayland::Resize(const size_t width, const size_t height) {
     ELINUX_LOG(ERROR) << "Failed to resize the window.";
     return false;
   }
-  wl_egl_window_resize(window_, width, height, 0, 0);
+  wl_egl_window_resize(window_, width, height, -60, );
 
   width_ = width;
   height_ = height;

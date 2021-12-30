@@ -24,7 +24,7 @@ class FlutterEmbedderOptions {
 #elif defined(FLUTTER_TARGET_BACKEND_X11)
     options_.AddWithoutValue("fullscreen", "f", "Always full-screen display",
                              false);
-    options_.AddInt("width", "w", "Flutter app window width", 1280, false);
+    options_.AddInt("width", "w", "Flutter app window width", 1220, false);
     options_.AddInt("height", "h", "Flutter app window height", 720, false);
 #else  // FLUTTER_TARGET_BACKEND_WAYLAND
     options_.AddWithoutValue("onscreen-keyboard", "k",
@@ -33,7 +33,7 @@ class FlutterEmbedderOptions {
                              "Enable window decorations", false);
     options_.AddWithoutValue("fullscreen", "f", "Always full-screen display",
                              false);
-    options_.AddInt("width", "w", "Flutter app window width", 1280, false);
+    options_.AddInt("width", "w", "Flutter app window width", 1220, false);
     options_.AddInt("height", "h", "Flutter app window height", 720, false);
 #endif
   }
@@ -96,7 +96,7 @@ class FlutterEmbedderOptions {
   bool use_window_decoration_ = false;
   flutter::FlutterViewController::ViewMode window_view_mode_ =
       flutter::FlutterViewController::ViewMode::kNormal;
-  int window_width_ = 1280;
+  int window_width_ = 1220;
   int window_height_ = 720;
 };
 
