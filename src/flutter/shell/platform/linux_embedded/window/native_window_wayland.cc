@@ -17,7 +17,7 @@ NativeWindowWayland::NativeWindowWayland(wl_compositor* compositor,
     return;
   }
 
-  window_ = wl_egl_window_create(surface_, width, height);
+  window_ = wl_egl_window_create(surface_, width + 60, height);
   if (!window_) {
     ELINUX_LOG(ERROR) << "Failed to create the EGL window.";
     return;
@@ -72,7 +72,7 @@ bool NativeWindowWayland::Resize(const size_t width, const size_t height) {
     ELINUX_LOG(ERROR) << "Failed to resize the window.";
     return false;
   }
-  wl_egl_window_resize(window_, width, height, -60, 0);
+  wl_egl_window_resize(window_, width, height, 0, 0);
 
   width_ = width;
   height_ = height;
