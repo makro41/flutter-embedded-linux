@@ -34,8 +34,12 @@ class ELinuxWindow {
   }
 
   FlutterDesktopViewProperties view_properties_;
+<<<<<<< HEAD
   double current_scale_ = 1.0;
   uint16_t current_rotation_ = 0;
+=======
+  double current_scale_ = 1.6;
+>>>>>>> 1712997 (change pixel rate to 1.6)
   double pointer_x_ = 0;
   double pointer_y_ = 0;
   std::string clipboard_data_ = "";
