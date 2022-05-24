@@ -36,7 +36,7 @@ class FlutterEmbedderOptions {
                              "Enable window decorations", false);
     options_.AddWithoutValue("fullscreen", "f", "Always full-screen display",
                              false);
-    options_.AddInt("width", "w", "Window width", 1280, false);
+    options_.AddInt("width", "w", "Window width", 1220, false);
     options_.AddInt("height", "h", "Window height", 720, false);
 #endif
   }
@@ -122,7 +122,7 @@ class FlutterEmbedderOptions {
   bool use_window_decoration_ = false;
   flutter::FlutterViewController::ViewMode window_view_mode_ =
       flutter::FlutterViewController::ViewMode::kNormal;
-  int window_width_ = 1280;
+  int window_width_ = 1220;
   int window_height_ = 720;
   flutter::FlutterViewController::ViewRotation window_view_rotation_ =
       flutter::FlutterViewController::ViewRotation::kRotation_0;

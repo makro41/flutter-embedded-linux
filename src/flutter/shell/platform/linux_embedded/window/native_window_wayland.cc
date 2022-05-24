@@ -17,7 +17,7 @@ NativeWindowWayland::NativeWindowWayland(wl_compositor* compositor,
     return;
   }
 
-  window_ = wl_egl_window_create(surface_, width, height);
+  window_ = wl_egl_window_create(surface_, width + 60, height);
   if (!window_) {
     ELINUX_LOG(ERROR) << "Failed to create the EGL window.";
     return;
